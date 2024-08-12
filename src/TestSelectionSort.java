@@ -29,11 +29,19 @@ public class TestSelectionSort {
 
     @Test
     public void testMixed() {
-        /** Test data contains with both positive, negative and zeros **/
+        int[] arr = new int[] { -8, 9, -7, 10, 0 };
+		int[] Sortedarr = new int[] { -8, -7, 0, 9, 10 };
+		
+		SelectionSort sorter = new SelectionSort();
+		assertArrayEquals(Sortedarr, sorter.basicSelectionSort(arr));
     }
 
     @Test
     public void testDuplicates() {
-        /** Test data contains duplicates **/
+        int[] arr = new int[] { 8, 2, 7, 7, 2 };
+		int[] Sortedarr = new int[] { 2, 2, 7, 7, 8 };
+		
+		SelectionSort sorter = new SelectionSort();
+		assertArrayEquals(Sortedarr, sorter.basicSelectionSort(arr));
     }
 }
